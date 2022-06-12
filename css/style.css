@@ -296,7 +296,7 @@ background-color: #135ab9;
     font-size: 35px;
     line-height: 42px;
     position: relative;
-    padding-bottom: 7px;
+    padding-bottom: 10px;
 }
 .places__title::after{
     position: absolute;
@@ -381,3 +381,53 @@ background-color: #135ab9;
 .places__card-pic{
     transition: .2s all ease-in;
 }
+.places{
+    margin-bottom: 150px;
+}
+/* Places end */
+
+/* Tour start */
+.view-link{
+    font-weight: 400;
+    font-size: 16px;
+    color: #006DFE;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: 0;
+    border: 1px solid #fff;
+    transition: .3s all ease-in;
+    padding-bottom: 15px;
+}
+.view-link::after{
+    content: url(../img/svg/arrow-right.svg);
+    margin-left: 26px;
+    transition: .2s all ease-in;
+}
+.view-link:hover::after{
+    content: url(../img/svg/arrow-right.svg);
+    margin-left: 35px;
+}
+.view-link:hover{
+    border-bottom: 1px solid #006DFE;
+}
+
+.tours__tour{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.tour__title{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+}
+.tour__desc{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 85px 0 58px;
+    max-width: 519px;
+}
+/* Tour end */
