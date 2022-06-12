@@ -47,6 +47,11 @@ table {
 	border-spacing: 0;
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+}
+
 /* reset end */
 
 html{
@@ -203,7 +208,6 @@ background-color: #135ab9;
 
 .benefits{
     box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
-    height: 30vh;
     max-width: 1262px;
     margin: 0 auto;
     padding: 100px;
@@ -229,3 +233,58 @@ background-color: #135ab9;
     grid-column-gap: 55px;
 }
 /* benefits end */
+
+.benefits__card-title{
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 26px;
+}
+.benefits__card-desc{
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+.benefits__card-ico{
+    margin-bottom: 37px;
+}
+.benefits__card-more{
+    font-weight: 400;
+    font-size: 16px;
+    color: #006DFE;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: 0;
+    border: 1px solid #fff;
+    transition: .3s all ease-in;
+    padding-bottom: 15px;
+}
+.benefits__card-more::after{
+    content: url(../img/svg/arrow-right.svg);
+    margin-left: 26px;
+    transition: .2s all ease-in;
+}
+.benefits__card-more:hover::after{
+    content: url(../img/svg/arrow-right.svg);
+    margin-left: 35px;
+}
+.benefits__card-more:hover{
+    border-bottom: 1px solid #006DFE;
+}
+.benefits__card{
+    grid-column: span 1;
+}
+.benefits__card-thumb{
+    display: block;
+    max-width: 66px;
+}
+.benefits{
+    margin-bottom: 131px;
+}
+/* Benefits end */
+
+/* Places start */
+.places__title{
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+}
