@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* reset end */
+
+html{
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+.wrapper{
+    max-width: 1060px;
+    margin: 0 auto;
+}
+/* font start */
+/* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v23-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/lato-v23-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v23-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  /* font end */
+body{
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+}
+/* header start */
+.header{
+    padding-top: 52px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.header__wrapper:last-child{
+    margin-right: 0;
+}
+/* nav start */
+
+.nav__list{
+    display: flex;
+    flex-wrap: wrap;
+    
+    line-height: 1.2;
+    line-height: 24px;
+}
+.nav__list-item{
+    margin-right: 82px;
+}
+.nav__list-link{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.nav__list-link:hover, .nav__list-link:active, .nav__list-link:focus{
+    opacity: .7;
+}
+
+/* nav end */
+/* header end */
+
+/* intro start */
+
+.intro{
+    min-height: 100vh;
+    background: url(../img/intro-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 263px;
+    padding-bottom: 223px;
+    display: block;
+    color: white;
+}
+.intro__title{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 22px;
+    max-width: 620px;
+}
+.intro__subtitle{
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 546px;
+    margin-bottom: 59px;
+}
+
+
+.search-form__field{
+    background: transparent url(../img/svg/circle.svg) no-repeat left 6px;
+    background-size: 20px;
+    border: 0;
+    border-bottom: 3px solid white;
+    width: 297px;
+    padding-bottom: 25px;
+    padding-right: 37px;
+    padding-left: 44px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin-right: 60px;
+    outline: 0;
+    outline-offset: 0;
+}
+.search-form__field::placeholder{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.search-form__info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.search-form__submit{
+    text-transform: uppercase;
+    font-size: 24px;
+    /* width: 171px; */
+    background-color: #1B7DFF;
+    outline: 0;
+    outline-offset: 0;
+    border: 0;
+    color: white;
+    padding: 15px 39px;
+}
+.search-form__submit:active{
+background-color: #135ab9;
+}
+
+/* intro end */
+
+/* benefits start */
+
+.benefits{
+    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+    height: 30vh;
+    max-width: 1262px;
+    margin: 0 auto;
+    padding: 100px;
+    position: relative;
+}
+.benefits__title{
+    font-size: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    background-color: white;
+    width: 100%;
+    padding: 93px 0 88px 100px;
+}
+
+.benefits__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 55px;
+}
+/* benefits end */
