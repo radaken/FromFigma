@@ -283,8 +283,101 @@ background-color: #135ab9;
 /* Benefits end */
 
 /* Places start */
+.places__caption{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
 .places__title{
     font-weight: 500;
     font-size: 35px;
     line-height: 42px;
+    position: relative;
+    padding-bottom: 7px;
+}
+.places__title::after{
+    position: absolute;
+    content: '';
+    width: 253px;
+    height: 3px;
+    display: block;
+    
+    background-color: #006DFE;
+}
+.wrapper_full{
+    max-width: 1262px;
+    margin: 0 auto;
+}
+.places__view-all{
+    font-weight: 400;
+    font-size: 16px;
+    color: #006DFE;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: 0;
+}
+.places__view-all::after{
+    content: url(../img/svg/arrow-right.svg);
+    margin-left: 26px;
+    transition: .2s all ease-in;
+}
+.places__view-all:hover{
+    opacity: .5;
+}
+
+/* Places cards */
+
+.places__cards{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+.places__card-pic{
+    object-fit: cover;
+    width: 100%;
+}
+.places__card::after{
+    display: block;
+    content: '';
+    background:  rgba(21, 24, 36, 0.4);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.places__card{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px 0px rgba(34, 60, 80, 0.2);
+}
+
+.places__card_size_lg{
+    height: 354px;
+    grid-column: span 3;
+}
+.places__card-cap{
+    position: absolute;
+    z-index: 3;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    bottom: 27px;
+    left: 29px;
+    color: white;
+}
+.places__card_size_sm{
+    height: 283px;
+    object-fit: cover;
+    grid-column: span 2;
+}
+.places__card:hover .places__card-pic{
+    transform: scale(1.05);
+}
+.places__card-pic{
+    transition: .2s all ease-in;
 }
